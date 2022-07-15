@@ -1,0 +1,42 @@
+
+
+/*
+
+    RESUMEN GUITARRAS
+
+    PRINCIPAL
+
+        1 - Crear pagina principal con botones que dirijan a:
+             Formulario
+             Buscar Guitarras
+             
+
+        2 - Formulario a rellenar sobre informacion de guitarras (nombre, peso, ) para añadir a la base
+                Nombre
+                Nº Modelo
+                Caracteristicas
+                Precio estimado
+
+        3 - Añadir informacion sobre guitarras ( 4 o 5 guitarras del fichero textos_bajos.txt)
+                Nombre
+                Nº Modelo
+                Caracteristicas
+                Precio estimado
+    
+    EXTRAS
+
+        4 - En la pantalla de inicio, poner un loading, con 3 pelotas botando (animacion) hacer sleep de unos 2 segundos mientras para que haga el efecto
+
+        5 - Pagina de busqueda: Rellenar campos y que muestre las guitarras que coincide
+
+
+
+    REPARTO:
+        - Ainhoa: Tarea 1
+        - Jorge: Tarea 2,4
+        - Mario: Tarea 2,4
+        - Patricia: Tarea 3
+        - Adrian: Tarea 5
+
+
+*/

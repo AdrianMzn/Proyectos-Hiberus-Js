@@ -1,0 +1,109 @@
+/*********  Buscador ***********/
+span{color:red;}
+
+
+/* div{
+    margin-bottom: 20px;
+} */
+
+form{
+    margin-top: 20px;
+    margin-left: 20px;
+    min-width: 30%;
+    max-width: 500px;
+}
+
+#listaEncontradas{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5%;
+    height: 800px;
+}
+
+div#input{
+    width: 40%;
+}
+
+button{
+    width: 70px;
+    height: 20px;
+    margin-left: 20px;
+}
+/* ***********  Listado guitarras  ***************/
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 420px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+
+.titulo {
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+    background: rgb(177, 79, 79);
+    color: white;
+    border-radius: 15px 15px 0px 0px;
+}
+.titulo h3{
+    text-align: center;
+}
+.cuerpo {
+    padding: 10px;
+   
+    text-align: center;
+    margin: 30px;
+}
+
+
+img{
+    width: 30%;
+    height: 50%;
+}
+
+p, h3{
+    text-align: left;
+}
+.precio, h4, p{
+    padding: 5px;
+    margin: 0px;
+    display: flex;
+    text-align: left;
+    justify-content:left;
+}
+.modelo, h4, p{
+    padding: 5px;
+    margin-bottom: 30px;
+    margin: 0px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.color, h4, p{
+    padding: 5px;
+    margin: 0px;
+    display: flex;
+    text-align: left;
+    justify-content: left;
+}
+.descripcion{
+    padding: 5px;
+}
+
+
+.pie {
+    background: rgb(177, 79, 79);
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.pie a {
+    text-decoration: none;
+    color: white;
+}
