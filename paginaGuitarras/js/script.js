@@ -103,7 +103,7 @@ function anyadirGuitarra(nombre, numeroSerie, precio, color, propiedades, imagen
 function buscarGuitarra(){
 
     var nombreGuitarra = document.getElementById("nombreTxt").value;
-    aavar numModeloMinGuitarra = document.getElementById("numModeloMinTxt").value;
+    var numModeloMinGuitarra = document.getElementById("numModeloMinTxt").value;
     var numModeloMaxGuitarra = document.getElementById("numModeloMaxTxt").value;
     var precioMinGuitarra = document.getElementById("precioMinTxt").value;
     var precioMaxGuitarra = document.getElementById("precioMaxTxt").value;
