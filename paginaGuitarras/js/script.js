@@ -131,7 +131,7 @@ function buscarGuitarra(){
 
     if( colorGuitarra != "default"){
         vectorGuitarras = vectorGuitarras.filter(
-            item => parseFloat( matrizGuitarras[item][3] ) == colorGuitarra  );
+            item =>  matrizGuitarras[item][3] == colorGuitarra  );
     }
 }
 
