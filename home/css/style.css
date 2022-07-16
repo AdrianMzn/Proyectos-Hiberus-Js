@@ -5,6 +5,7 @@
     font-family: 'lato';
 }
 
+/* *****************        CABECERA          ***************** */
 /*Estilos para Header*/
 #headerIndex {
     background-color: black;
@@ -38,7 +39,7 @@ a:link, a:visited, a:active {
 }
 
 
-
+/* *****************        MAIN          ***************** */
 /*Estilos para main*/
 #mainSection {
     display: flex;
@@ -87,6 +88,7 @@ a:link, a:visited, a:active {
     margin: 10px;
 }
 
+/* ************************  FOOTER *************************** */
 footer {
     background-color: black;
     color: white;
