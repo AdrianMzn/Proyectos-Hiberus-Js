@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/styles.css">
-    </head>
-    <body >
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header id="headerIndex">
+        <h1>Guitar Sense</h1>
+    </header>
+    <nav id="navIndex">
+        <ul>
+            <li><a class="linkNav" href="../home/index.html">Inicio</a></li>
+            <li><a class="linkNav" href="#">Bajos</a></li>
+            <li><a class="linkNav" href="../agregarGuitarra/agregarGuitarra.html">Añadir bajo</a></li>
+            <li><a class="linkNav" href="../formulario/formulario.html">Contactanos</a></li>
+        </ul>
+    </nav>
 
 
     <section class="center">
@@ -17,57 +29,57 @@
                 <legend>Busqueda de Guitarras</legend>
 
                 <div>
-                    <label for="nombreTxt">Nombre:</label> 
-                    <input type="text" name="nombre" id="nombreTxt" maxlength="20" /> 
+                    <label for="nombreTxt">Nombre:</label>
+                    <input type="text" name="nombre" id="nombreTxt" maxlength="20" />
                 </div>
 
                 <div>
                     <label for="numModeloMinTxt">Nº Modelo mínimo:</label>
-                    <input type="number" name="numModeloMin" id="numModeloMinTxt"/>
+                    <input type="number" name="numModeloMin" id="numModeloMinTxt" />
                 </div>
 
                 <div>
                     <label for="numModeloMaxTxt">Nº Modelo máximo:</label>
-                    <input type="number" name="numModeloMax" id="numModeloMaxTxt"/>
+                    <input type="number" name="numModeloMax" id="numModeloMaxTxt" />
                 </div>
 
                 <div>
                     <label for="PrecioMinTxt">Precio Mínimo:</label>
                     <select type="text" name="PrecioMin" id="precioMinTxt" list="PrecioMinList" />
-                        <option selected disabled value="default">Seleccione precio mínimo</option>
-                        <option value="1100">1100</option>
-                        <option value="1300">1300</option>
-                        <option value="1500">1500</option>
-                        <option value="1700">1700</option>
-                        <option value="1900">1900</option>
-                        <option value="2100">2100</option>
+                    <option selected disabled value="default">Seleccione precio mínimo</option>
+                    <option value="1100">1100</option>
+                    <option value="1300">1300</option>
+                    <option value="1500">1500</option>
+                    <option value="1700">1700</option>
+                    <option value="1900">1900</option>
+                    <option value="2100">2100</option>
                     </select>
                 </div>
 
                 <div>
                     <label for="PrecioMaxTxt">Precio Máximo:</label>
                     <select type="text" name="PrecioMax" id="precioMaxTxt" list="PrecioMaxList" />
-                        <option selected disabled value="default">Seleccione precio máximo</option>
-                        <option value="1100">1300</option>
-                        <option value="1500">1500</option>
-                        <option value="1700">1700</option>
-                        <option value="1900">1900</option>
-                        <option value="2100">2100</option>
-                        <option value="2100">2300</option>
+                    <option selected disabled value="default">Seleccione precio máximo</option>
+                    <option value="1100">1300</option>
+                    <option value="1500">1500</option>
+                    <option value="1700">1700</option>
+                    <option value="1900">1900</option>
+                    <option value="2100">2100</option>
+                    <option value="2100">2300</option>
                     </select>
                 </div>
 
                 <div>
                     <label for="ColorTxt">Color:</label>
                     <select type="text" name="Color" id="colorTxt" list="ColorList" />
-                        <option selected disabled value="default">Seleccione color</option>
-                        <option value="Verde">Verde</option>
-                        <option value="Naranja">Naranja</option>
-                        <option value="Granate">Granate</option>
-                        <option value="Negro">Negro</option>
-                        <option value="Marron">Marron</option>
-                        <option value="Plateado">Plateado</option>
-                        <option value="Blanco">Blanco</option>
+                    <option selected disabled value="default">Seleccione color</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Granate">Granate</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Marron">Marron</option>
+                    <option value="Plateado">Plateado</option>
+                    <option value="Blanco">Blanco</option>
                     </select>
                 </div>
                 <br>
@@ -82,11 +94,13 @@
     <section>
 
         <div id="listaEncontradas">
-            
+
         </div>
-            
+
         <script src="js/script.js"></script>
     </section>
+    <footer>Hola</footer>
+</body>
 
-    </body>
+
 </html>
