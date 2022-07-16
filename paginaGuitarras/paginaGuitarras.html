@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body onload="buscarGuitarra()">
+<body onload="listarGuitarrasCoincidentes()">
     <header id="headerIndex">
         <h1>Guitar Sense</h1>
     </header>
@@ -46,7 +46,7 @@
                 <div>
                     <label for="PrecioMinTxt">Precio Mínimo:</label>
                     <select type="text" name="PrecioMin" id="precioMinTxt" list="PrecioMinList" />
-                    <option selected disabled value="default">Seleccione precio mínimo</option>
+                    <option selected value="default">No buscar por precio mínimo</option>
                     <option value="1100">1100</option>
                     <option value="1300">1300</option>
                     <option value="1500">1500</option>
@@ -59,7 +59,7 @@
                 <div>
                     <label for="PrecioMaxTxt">Precio Máximo:</label>
                     <select type="text" name="PrecioMax" id="precioMaxTxt" list="PrecioMaxList" />
-                    <option selected disabled value="default">Seleccione precio máximo</option>
+                    <option selected  value="default">No buscar por precio máximo</option>
                     <option value="1100">1300</option>
                     <option value="1500">1500</option>
                     <option value="1700">1700</option>
@@ -72,7 +72,7 @@
                 <div>
                     <label for="ColorTxt">Color:</label>
                     <select type="text" name="Color" id="colorTxt" list="ColorList" />
-                    <option selected disabled value="default">Seleccione color</option>
+                    <option selected value="default">No buscar por color</option>
                     <option value="Verde">Verde</option>
                     <option value="Naranja">Naranja</option>
                     <option value="Granate">Granate</option>

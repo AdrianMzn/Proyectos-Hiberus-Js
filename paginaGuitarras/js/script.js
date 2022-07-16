@@ -83,6 +83,8 @@ matrizGuitarras[5][5] = "img/american_prof_precision_bass_V.jpg";
 function enviarDatos(event){
     event.preventDefault();
     buscarGuitarra();
+
+    listarGuitarrasCoincidentes();
 }
 
 
@@ -99,7 +101,6 @@ function buscarGuitarra(){
     vectorGuitarras = new Array(matrizGuitarras.length);
     for (let index = 0; index < matrizGuitarras.length; index++) {
         vectorGuitarras[index]=index;
-        
     }
 
 
@@ -132,8 +133,6 @@ function buscarGuitarra(){
         vectorGuitarras = vectorGuitarras.filter(
             item => parseFloat( matrizGuitarras[item][3] ) == colorGuitarra  );
     }
-
-    listarGuitarrasCoincidentes();
 }
 
 
@@ -181,7 +180,7 @@ function listarGuitarrasCoincidentes(){
     var divListaGuitarras = document.getElementById("listaEncontradas");
     divListaGuitarras.innerHTML = "";
 
-    for (let i = 0; i < vectorGuitarras.length; i++) {
+    for (var i of vectorGuitarras) {
         infoGuitarra = matrizGuitarras[i];
 
         var divTargeta = document.createElement("div");
@@ -238,12 +237,8 @@ function listarGuitarrasCoincidentes(){
         // console.log(matrizGuitarras[i]) 
     }
 
-
 }
 
-function aux(){
-    console.log("a");
-}
 
 function listarGuitarras(){
 
@@ -308,6 +303,3 @@ function listarGuitarras(){
         // console.log(matrizGuitarras[i]) 
     }
 }
-
-
-
