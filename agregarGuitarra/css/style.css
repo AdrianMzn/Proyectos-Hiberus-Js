@@ -29,14 +29,27 @@ ul {
     font-size: 17px;
 }
 
+.linkNav:hover{
+    background-color: gray;
+    padding: 7px 30px;
+    border-radius: 5px;
+}
+
+.current{
+    background-color: rgba(255, 255, 255, 0.445);
+    color: brown;
+    border-radius: 3px;
+}
+
 a:link, a:visited, a:active {
     text-decoration:none;
 }
 
 .linkNav {
     color: rgb(248, 249, 250);
-    margin: 20px;
+    padding: 7px 30px;
 }
+
 
 /*Estilos para main*/
 #mainSection {
@@ -50,37 +63,32 @@ a:link, a:visited, a:active {
 /************************ FORMULARIOS  **************************/
 
 /* Color y tamaño de la letra del placeholder */
-  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     color: #aca49c;
     font-size: 0.875em;
-  }
-  
-  /* Disminuye el tamaño de letra y cambia el color al hacer hover */
-  input:hover::placeholder, textarea:hover::placeholder {
+}
+
+/* Disminuye el tamaño de letra y cambia el color al hacer hover */
+input:hover::placeholder, textarea:hover::placeholder {
     color: #e2dedb;
     font-size: 0.875em;
-  }
-  
-  body {
-    font-family: 'Lato', sans-serif;
-    
-  } 
-  
-  .titulo {
+}
+
+.titulo {
     position: relative;
     margin: 100px 0 25px 0;
     font-size: 2.3em;
     text-align: center;
     letter-spacing: 7px;
-  }
-  
-  #form-guitarras, #form-contacto{
+}
+
+#form-guitarras, #form-contacto{
     position: relative;
     width: 600px;
     margin: 50px auto 100px auto;
-  }
-  
-  input {
+}
+
+input {
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
     width: 570px;
@@ -92,41 +100,41 @@ a:link, a:visited, a:active {
     border: solid 1px #b3aca7;
     border-bottom: none;
     transition: all 0.3s ease-in-out;
-  }
-  
-  input:hover {
+}
+
+input:hover {
     background: #b3aca7;
     color: #e2dedb;
-  }
-  
-  textarea {
+}
+
+textarea {
     width: 570px;
     max-width: 570px;
     height: 110px;
     max-height: 110px;
     padding: 15px;
-    
+
     background: transparent;
     outline: none;
-    
+
     color: #726659;
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    
+
     border: solid 1px #b3aca7;
-    
+
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
-  }
-  
-  textarea:hover {
+}
+
+textarea:hover {
     background: #b3aca7;
     color: #e2dedb;
-  }
-  
-  #submit {
+}
+
+#submit {
     width: 602px;
     padding: 0;
     margin: -5px 0px 0px 0px;
@@ -137,16 +145,16 @@ a:link, a:visited, a:active {
     cursor: pointer;
     border: solid 1px #b3aca7;
     border-top: none;
-  }
-  
-  #submit:hover {
+}
+
+#submit:hover {
     color: #e2dedb;
-  }
+}
 
 /* ************************  FOOTER *************************** */
 footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 57px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 57px;
 }

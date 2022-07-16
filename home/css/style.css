@@ -29,13 +29,25 @@ ul {
     font-size: 17px;
 }
 
+.linkNav:hover{
+    background-color: gray;
+    padding: 7px 30px;
+    border-radius: 5px;
+}
+
+.current{
+    background-color: rgba(255, 255, 255, 0.445);
+    color: brown;
+    border-radius: 50px;
+}
+
 a:link, a:visited, a:active {
     text-decoration:none;
 }
 
 .linkNav {
     color: rgb(248, 249, 250);
-    margin: 20px;
+    padding: 7px 30px;
 }
 
 
