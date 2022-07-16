@@ -105,8 +105,11 @@ function buscarGuitarra(){
 
 
     if( nombreGuitarra != ""){
-        vectorGuitarras = vectorGuitarras.filter(
-            item => matrizGuitarras[item][0].includes(nombreGuitarra) );
+        for ( let palabra of nombreGuitarra.split(" ") ){
+            vectorGuitarras = vectorGuitarras.filter(
+                item => matrizGuitarras[item][0].includes(palabra) );
+        }
+        
     }
 
     if( numModeloMinGuitarra != ""){
