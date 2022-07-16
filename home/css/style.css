@@ -108,3 +108,18 @@ footer {
     text-align: center;
     padding: 57px;
 }
+
+@media (max-width: 600px) {
+    #h2Historia {
+        font-size: 22px;
+    }
+    
+    .pHistoria {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .linkImgPaginas h3{
+        font-size: 16px;
+    }
+}
