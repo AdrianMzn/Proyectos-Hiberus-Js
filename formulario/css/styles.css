@@ -38,7 +38,7 @@ ul {
 .current{
     background-color: rgba(255, 255, 255, 0.445);
     color: brown;
-    border-radius: 3px;
+    border-radius: 50px;
 }
 
 a:link, a:visited, a:active {
