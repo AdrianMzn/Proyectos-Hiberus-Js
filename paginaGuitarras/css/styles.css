@@ -121,6 +121,7 @@ button{
 
 .titulo {
     font-size: 24px;
+    height: 78px; /*Igualar alto titulos tarjetas*/
     padding: 10px 10px 0 10px;
     text-align: center;
     background: rgb(177, 79, 79);
@@ -132,9 +133,12 @@ button{
 }
 .cuerpo {
     padding: 10px;
-   
     text-align: center;
     margin: 30px;
+}
+
+.imagen{
+    padding-bottom: 30px;
 }
 
 
@@ -143,10 +147,29 @@ img{
     height: 50%;
 }
 
-p, h3{
+h3{/*eliminada p (Ainhoa)*/
     text-align: left;
 }
-.precio, h4, p{
+
+/*Añadir clases para poner centrado Footer (Ainhoa)*/
+.modelo, .precio, .color{
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+}
+
+.estiloModeloPrecioColor{
+    padding: 5px;
+    margin: 0px;
+    display: flex;
+    text-align: left;
+    justify-content:left;
+    text-align: justify;
+}
+
+/*****He comentado lo de antes por si acaso (Ainhoa)******/
+
+/* .precio, h4, p{
     padding: 5px;
     margin: 0px;
     display: flex;
@@ -167,10 +190,10 @@ p, h3{
     display: flex;
     text-align: left;
     justify-content: left;
-}
-.descripcion{
+} */
+/* .descripcion{
     padding: 5px;
-}
+} */
 
 
 .pie {

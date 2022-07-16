@@ -211,26 +211,26 @@ function listarGuitarrasCoincidentes(){
 
         var divModelo = document.createElement("div");
         divModelo.setAttribute('class','modelo');
-        divModelo.innerHTML = "<h4>Nº de modelo: </h4>";
-        divModelo.innerHTML += "<p> " + infoGuitarra[1] + "</p> ";
+        divModelo.innerHTML = "<h4 class='estiloModeloPrecioColor'>Nº de modelo: </h4>";
+        divModelo.innerHTML += "<p class='estiloModeloPrecioColor'> " + infoGuitarra[1] + "</p> ";
         divCaracteristicas.appendChild(divModelo);
 
         var divPrecio = document.createElement("div");
         divPrecio.setAttribute('class','precio'); 
-        divPrecio.innerHTML = "<h4>Precio: </h4>";
-        divPrecio.innerHTML += "<p> " + infoGuitarra[2] + "</p> ";
+        divPrecio.innerHTML = "<h4 class='estiloModeloPrecioColor'>Precio: </h4>";
+        divPrecio.innerHTML += "<p class='estiloModeloPrecioColor'> " + infoGuitarra[2] + "</p> ";
         divCaracteristicas.appendChild(divPrecio);
 
         var divColor = document.createElement("div");
         divColor.setAttribute('class','color'); 
-        divColor.innerHTML = "<h4>Color: </h4>";
-        divColor.innerHTML += "<p> " + infoGuitarra[3] + "</p> ";
+        divColor.innerHTML = "<h4 class='estiloModeloPrecioColor'>Color: </h4>";
+        divColor.innerHTML += "<p class='estiloModeloPrecioColor'> " + infoGuitarra[3] + "</p> ";
         divCaracteristicas.appendChild(divColor);
 
         var divDescripcion = document.createElement("div");
         divDescripcion.setAttribute('class','descripcion'); 
-        divDescripcion.innerHTML = "<h4>Descripción: </h4>";
-        divDescripcion.innerHTML += "<p> " + infoGuitarra[4] + "</p> ";
+        divDescripcion.innerHTML = "<h4 class='estiloModeloPrecioColor'>Descripción: </h4>";
+        divDescripcion.innerHTML += "<p class='estiloModeloPrecioColor'> " + infoGuitarra[4] + "</p> ";
         divCaracteristicas.appendChild(divDescripcion);
         
         var divPie = document.createElement("div");
