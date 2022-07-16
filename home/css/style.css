@@ -5,7 +5,7 @@
     font-family: 'lato';
 }
 
-/* *****************        CABECERA          ***************** */
+/* **************** CABECERA ***************** */
 /*Estilos para Header*/
 #headerIndex {
     background-color: black;
@@ -39,20 +39,18 @@ a:link, a:visited, a:active {
 }
 
 
-/* *****************        MAIN          ***************** */
+/* ***************** MAIN ***************** */
 /*Estilos para main*/
 #mainSection {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 30px;
 }
 
 /*Historia bajo*/
 #historiaBajo{
-    border-bottom: 1px solid rgba(182, 180, 180, 0.76);
-    margin: 5px;
-    padding-bottom: 30px;
+    background-color: rgba(190, 188, 188, 0.267);
+    padding: 30px;
 }
 
 #h2Historia {
@@ -71,15 +69,18 @@ a:link, a:visited, a:active {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    border-bottom: 1px solid rgba(182, 180, 180, 0.76);
 }
 
 .linkImgPaginas {
+    text-align: center;
+    width: 50%;
     margin: 20px 50px;
 }
 
 .linkImgPaginas img{
-    width: 500px;
-    height: 400px;
+
+    width: 80%;
     border-radius: 5px;
 }
 
@@ -88,7 +89,7 @@ a:link, a:visited, a:active {
     margin: 10px;
 }
 
-/* ************************  FOOTER *************************** */
+/* ***************** FOOTER ***************** */
 footer {
     background-color: black;
     color: white;
