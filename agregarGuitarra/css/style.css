@@ -145,6 +145,8 @@ a:link, a:visited, a:active {
 
 /* ************************  FOOTER *************************** */
 footer {
-    background-color: black;
-    padding: 57px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 57px;
 }

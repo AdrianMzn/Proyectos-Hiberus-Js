@@ -91,6 +91,7 @@ form{
     margin-left: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /*Para centrar tarjetas guitarras (Ainhoa)*/
     column-gap: 5%;
     /* height: 800px; */
 }
@@ -188,5 +189,7 @@ p, h3{
 /* ************************  FOOTER *************************** */
 footer {
     background-color: black;
+    color: white;
+    text-align: center;
     padding: 57px;
 }

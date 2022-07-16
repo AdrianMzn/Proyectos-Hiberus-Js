@@ -89,5 +89,7 @@ a:link, a:visited, a:active {
 
 footer {
     background-color: black;
+    color: white;
+    text-align: center;
     padding: 57px;
 }
