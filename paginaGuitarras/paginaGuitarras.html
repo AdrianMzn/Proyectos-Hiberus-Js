@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body onload="buscarGuitarra()">
     <header id="headerIndex">
         <h1>Guitar Sense</h1>
     </header>
@@ -24,7 +24,7 @@
 
 
     <section class="center">
-        <form action="">
+        <form action="" onsubmit="enviarDatos(event)">
             <fieldset>
                 <legend>Busqueda de Guitarras</legend>
 
@@ -84,7 +84,7 @@
                 </div>
                 <br>
 
-                <button onclick="buscarGuitarra()" value="Buscar">Buscar</button>
+                <button type="submit" value="Buscar">Buscar</button>
                 <button type="reset" value="Limpiar">Limpiar</button>
             </fieldset>
         </form>
