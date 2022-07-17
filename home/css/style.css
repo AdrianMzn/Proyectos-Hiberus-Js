@@ -32,7 +32,7 @@ ul {
 .linkNav:hover{
     background-color: gray;
     padding: 7px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
  /*Current: señala en la página que estamos*/
 .current{
@@ -81,17 +81,15 @@ a:link, a:visited, a:active {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    border-bottom: 1px solid rgba(182, 180, 180, 0.76);
 }
 
 .linkImgPaginas {
     text-align: center;
     width: 50%;
-    margin: 20px 50px;
+    margin: 80px 50px;
 }
 
 .linkImgPaginas img{
-
     width: 80%;
     border-radius: 5px;
 }
@@ -99,6 +97,13 @@ a:link, a:visited, a:active {
 .linkImgPaginas h3{
     text-align: center;
     margin: 10px;
+}
+
+.videoYouTube{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(190, 188, 188, 0.267);
 }
 
 /* ***************** FOOTER ***************** */
