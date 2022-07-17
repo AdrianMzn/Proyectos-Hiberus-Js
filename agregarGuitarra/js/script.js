@@ -76,13 +76,16 @@ function addTarjeta(event){
 
     var confirmButton = document.createElement("button");
     confirmButton.setAttribute('class','botonConfirmar');
+    confirmButton.setAttribute('onClick','window.location.reload();');
     confirmButton.innerHTML = "Confirmar";
     confirmButton.type = "submit";
     confirmButton.name = "formBtn";
     divBotones.appendChild(confirmButton);
 
+
     var deleteButton = document.createElement("button");
     deleteButton.setAttribute('class','botonEliminar');
+    deleteButton.setAttribute('onClick','window.location.reload();');
     deleteButton.innerHTML = "Eliminar";
     deleteButton.type = "reset";
     deleteButton.name = "formBtn";
