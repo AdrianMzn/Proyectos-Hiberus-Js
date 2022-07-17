@@ -24,23 +24,38 @@
     </nav>
     <main>
         <section class="nuevaGuitarra">
-            <h1 class="titulo">NUEVAS GUITARRAS:</h1>
+            <h1 class="titulo">INFORMACIÓN DEL NUEVO BAJO</h1>
             <form id="form-guitarras">
                 <input type="text" id="nameGuitarra" placeholder="NOMBRE" required="required">
                 <input type="text" id="numeroModelo" placeholder="NÚMERO DE MODELO" required="required">
                 <!-- <input type="image" src="" alt="" multiple="multiple" placeholder="IMAGEN DE LA GUITARRA"> -->
                 <input type="number" id="precioGuitarra" placeholder="PRECIO ESTIMADO">
+                <input type="text" id="colorGuitarra" placeholder="COLOR DEL BAJO" required="required">
                 <textarea type="text" id="carateristicas" placeholder="CARACTERÍSTICAS"></textarea>
                 
-                <input id="submit" type="submit" value="Enviar">
+                <input onclick="addTarjeta(event)" id="submit" type="submit" value="Enviar">
             </form>
         </section>
+
+        <div id="listaEncontradas">
+
+        </div>
+
+        <div id="divBotones" class="divBotones">
+
+        </div>
         
     </main>
+
+    
+
     <footer>
         <h4>Guitar Sense Company</h4>
         <p>Copyright © 2022 · All Rights Reserved - Domain Name</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>

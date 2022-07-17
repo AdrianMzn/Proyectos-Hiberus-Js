@@ -196,7 +196,7 @@ function listarGuitarrasCoincidentes(){
     divListaGuitarras.innerHTML = "";
 
     for (var i of vectorGuitarras) {
-        infoGuitarra = MY.matrizGuitarras[i];
+        var infoGuitarra = MY.matrizGuitarras[i];
 
         var divTargeta = document.createElement("div");
         divTargeta.setAttribute('class','tarjeta');
