@@ -25,12 +25,12 @@
     <main>
         <section class="nuevaGuitarra">
             <h1 class="titulo">NUEVAS GUITARRAS:</h1>
-            <form id="form-guitarras">
-                <input type="text" id="nameGuitarra" placeholder="NOMBRE" required="required">
-                <input type="text" id="numeroModelo" placeholder="NÚMERO DE MODELO" required="required">
-                <!-- <input type="image" src="" alt="" multiple="multiple" placeholder="IMAGEN DE LA GUITARRA"> -->
+            <form id="form-guitarras" method="POST">
+                <input type="text" id="nombreGuitarra" placeholder="NOMBRE" required="required">
+                <input type="text" id="numModeloGuitarra" placeholder="NÚMERO DE MODELO" required="required">
+                <input type="text" id="colorGuitarra" placeholder="COLOR">
                 <input type="number" id="precioGuitarra" placeholder="PRECIO ESTIMADO">
-                <textarea type="text" id="carateristicas" placeholder="CARACTERÍSTICAS"></textarea>
+                <textarea type="text" id="propiedadesGuitarra" placeholder="CARACTERÍSTICAS"></textarea>
                 
                 <input id="submit" type="submit" value="Enviar">
             </form>
