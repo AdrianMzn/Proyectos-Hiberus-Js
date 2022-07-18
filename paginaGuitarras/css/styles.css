@@ -112,13 +112,20 @@ form{
     margin: 10px;
     text-align: center;
 }
+.boton{
+    border-radius: 50px;
+}
+.boton:hover{
+    background-color: gray;
+    /* border-color: transparent; */
+}
 
 button{
     width: 40%;
     padding: 5px;
     background-color: rgb(177, 79, 79);
     color: white;
-    border-color: rgb(177, 79, 79);
+    border-color: transparent;
 }
 
 input, select{

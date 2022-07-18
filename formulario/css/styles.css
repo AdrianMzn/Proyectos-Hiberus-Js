@@ -72,13 +72,13 @@ footer {
 
 /* Color y tamaño de la letra del placeholder */
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #aca49c;
+    color: rgb(89, 86, 86);
     font-size: 0.875em;
 }
 
 /* Disminuye el tamaño de letra y cambia el color al hacer hover */
 input:hover::placeholder, textarea:hover::placeholder {
-    color: #e2dedb;
+    color:white;
     font-size: 0.875em;
 }
 
@@ -112,9 +112,12 @@ input {
 
 input:hover {
     background: #b3aca7;
-    color: #e2dedb;
+    color:white;
 }
 
+#imagenGuitarra{
+    padding-top: 25px;
+}
 textarea {
     width: 570px;
     max-width: 570px;
@@ -139,7 +142,7 @@ textarea {
 
 textarea:hover {
     background: #b3aca7;
-    color: #e2dedb;
+    color:white;
 }
 
 #submit {
@@ -148,15 +151,17 @@ textarea:hover {
     margin: -5px 0px 0px 0px;
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
-    color: #b3aca7;
+    color: white;
     outline:none;
     cursor: pointer;
     border: solid 1px #b3aca7;
     border-top: none;
+    background-color: rgb(177, 79, 79);
 }
 
 #submit:hover {
-    color: #e2dedb;
+    background: gray;
+    color:white;
 }
 
 /* ************************  FOOTER *************************** */
