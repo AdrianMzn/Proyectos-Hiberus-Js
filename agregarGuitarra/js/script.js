@@ -1,5 +1,18 @@
 //prueba
 
+function handleImageUpload() 
+{
+
+    var image = document.getElementById("imagenGuitarraUpload").files[0];
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+        document.getElementById("imagenGuitarra").src = e.target.result;
+    }
+    reader.readAsDataURL(image);
+
+} 
+
 function addTarjeta(event){
     event.preventDefault();
 
@@ -30,8 +43,10 @@ function addTarjeta(event){
 
     var divImagen = document.createElement("div");
     divImagen.setAttribute('class','imagen'); 
-    divImagen.innerHTML = "<img src='" + infoGuitarra[5] + "' alt='muestra'></img>";
+    divImagen.innerHTML = "<img id='imagenGuitarra' src='' />";
     divCuerpo.appendChild(divImagen);
+    handleImageUpload();
+    
 
     var divCaracteristicas = document.createElement("div");
     divCaracteristicas.setAttribute('class','caracteristicas'); 
