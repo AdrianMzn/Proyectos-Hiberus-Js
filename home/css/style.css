@@ -39,6 +39,7 @@ ul {
     padding: 7px 30px;
     border-radius: 50px;
 }
+
  /*Current: señala en la página que estamos*/
 .current{
     background-color: rgba(255, 255, 255, 0.445);
@@ -90,25 +91,54 @@ a:link, a:visited, a:active {
 
 .linkImgPaginas {
     text-align: center;
-    width: 50%;
-    margin: 80px 50px;
+    width: 35%;
+    margin: 100px 50px 150px;
 }
 
-.linkImgPaginas img{
-    width: 80%;
+/*Para hacer el hover en las imagenes link de la home*/
+.imgLinkIndex {
     border-radius: 5px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    z-index: 0;
 }
-
-.linkImgPaginas h3{
+  
+.textoImg {
+    color: rgb(143, 63, 63);
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     text-align: center;
-    margin: 10px;
+    z-index: 2;
 }
 
+.linkImgPaginas:hover .imgLinkIndex {
+opacity: 0.3;
+}
+
+.linkImgPaginas:hover .textoImg {
+opacity: 1;
+}
+
+/*Video Youtube*/
 .videoYouTube{
     display: flex;
     justify-content: center;
     padding: 50px;
     background-color: rgba(190, 188, 188, 0.267);
+}
+
+iframe{
+    border-radius: 5px;
 }
 
 /* ***************** FOOTER ***************** */
@@ -120,6 +150,23 @@ footer {
 }
 
 @media (max-width: 600px) {
+    #headerIndex {
+        font-size: 18px;
+    }
+
+    .imgNav{
+        width: 25px;
+        height: 25px;
+    }
+    
+    ul {
+        font-size: 13px;
+    }
+
+    .linkNav, .linkNav:hover{
+        padding: 7px 15px;
+    }
+
     #h2Historia {
         font-size: 22px;
     }
@@ -129,7 +176,18 @@ footer {
         padding: 0 20px;
     }
 
+    #linkPaginasAnadirBuscar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .linkImgPaginas{
+        width: 65%;
+        margin: 40px 50px 60px;
+    }
+    
     .linkImgPaginas h3{
         font-size: 16px;
+
     }
 }
