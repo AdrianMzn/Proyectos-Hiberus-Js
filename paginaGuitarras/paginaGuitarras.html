@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="../page_Icon.jpg">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
 <body onload="listarGuitarrasCoincidentes()">
     <header id="headerIndex">
-        <h1>Guitar Sense</h1>
+        <h1> B<img src="../nav_Icon.png" alt="icono" class="imgNav" >ss Sense</h1>
     </header>
     <nav id="navIndex">
         <ul>
@@ -26,7 +27,7 @@
     <section class="center">
         <form action="" onsubmit="enviarDatos(event)">
             <fieldset>
-                <legend>Busqueda de Guitarras</legend>
+                <legend>Busqueda de Bajos</legend>
 
                 <div>
                     <label for="nombreTxt">Nombre:</label>
@@ -82,10 +83,10 @@
                     <option value="Blanco">Blanco</option>
                     </select>
                 </div>
-                <br>
-
-                <button type="submit" value="Buscar">Buscar</button>
-                <button type="reset" value="Limpiar" onClick="window.location.reload();">Limpiar</button>
+                <div class="botones">
+                    <button onclick="buscarGuitarra()" value="Buscar">Buscar</button>
+                    <button onClick="window.location.reload();" type="reset" value="Limpiar">Limpiar</button>
+                </div>
             </fieldset>
         </form>
 
@@ -100,7 +101,7 @@
         <script src="js/script.js"></script>
     </section>
     <footer>
-        <h4>Guitar Sense Company</h4>
+        <h4>Bass Sense Company</h4>
         <p>Copyright © 2022 · All Rights Reserved - Domain Name</p>
     </footer>
 </body>

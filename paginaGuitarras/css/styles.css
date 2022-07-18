@@ -21,6 +21,11 @@
     padding: 7px 0
 }
 
+.imgNav{
+    width: 35px;
+    height: 35px;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -32,7 +37,7 @@ ul {
 .linkNav:hover{
     background-color: gray;
     padding: 7px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .current{
@@ -83,10 +88,6 @@ a:link, a:visited, a:active {
 span{color:red;}
 
 
-/* div{
-    margin-bottom: 20px;
-} */
-
 .center {
     display: flex;
     justify-content: center;
@@ -105,17 +106,24 @@ form{
     flex-wrap: wrap;
     justify-content: center; /*Para centrar tarjetas guitarras (Ainhoa)*/
     column-gap: 5%;
-    /* height: 800px; */
 }
 
-div#input{
-    width: 40%;
+.botones{
+    margin: 10px;
+    text-align: center;
 }
 
 button{
-    width: 70px;
-    height: 20px;
-    margin-left: 20px;
+    width: 40%;
+    padding: 5px;
+    background-color: rgb(177, 79, 79);
+    color: white;
+    border-color: rgb(177, 79, 79);
+}
+
+input, select{
+    width: 100%;
+    margin:5px 0px 5px 0px;
 }
 /* ***********  Listado guitarras  ***************/
 .tarjeta {

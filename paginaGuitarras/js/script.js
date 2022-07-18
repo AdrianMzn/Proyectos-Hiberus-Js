@@ -36,7 +36,7 @@ MY.matrizGuitarras[0][0] = "American Performer Precision Bass";
 MY.matrizGuitarras[0][1] = "0198600300";
 MY.matrizGuitarras[0][2] = "1399.00";
 MY.matrizGuitarras[0][3] = "Naranja";
-MY.matrizGuitarras[0][4] = "Cuerpo de aliso. Pastillas split-coil Yosemite P Bass en el centro; Yosemite single-coil Jazz Bass en puente; Sistema de tono Greasebucket. Mástil en forma de “C moderna” con diapasón de radio de 9.5 ”; 20 trastes médium jumbo. Clavijero de eje cónico; logo de los 70 plateado.";
+MY.matrizGuitarras[0][4] = "Cuerpo de aliso. Pastillas split-coil Yosemite P Bass en el centro. Yosemite single-coil Jazz Bass en puente. Sistema de tono Greasebucket. Mástil en forma de “C moderna” con diapasón de radio de 9.5 ”. 20 trastes médium jumbo. Clavijero de eje cónico. Logo de los 70 plateado.";
 MY.matrizGuitarras[0][5] = "img/american_performer_precision_bass.jpg";
 
 //Guitarra 1
@@ -52,7 +52,7 @@ MY.matrizGuitarras[2][0] = "American Performer Mustang Bass";
 MY.matrizGuitarras[2][1] = "0198620345";
 MY.matrizGuitarras[2][2] = "1349.00";
 MY.matrizGuitarras[2][3] = "Granate";
-MY.matrizGuitarras[2][4] = "Cuerpo de aliso. Una pastilla Yosemite single-coil Mustang Bass en el centro; Una pastilla Yosemite single-coil Jazz Bass en el puente; Sistema de tono Greasebucket. Mástil en forma de “C moderna” con diapasón de radio de 9.5 ”; 20 trastes médium jumbo.";
+MY.matrizGuitarras[2][4] = "Cuerpo de aliso. Una pastilla Yosemite single-coil Mustang Bass en el centro. Una pastilla Yosemite single-coil Jazz Bass en el puente. Sistema de tono Greasebucket. Mástil en forma de “C moderna” con diapasón de radio de 9.5 ”. 20 trastes médium jumbo.";
 MY.matrizGuitarras[2][5] = "img/american_performer_mustang_bass.jpg";
 
 //Guitarra 3
@@ -60,7 +60,7 @@ MY.matrizGuitarras[3][0] = "American Professional II Jazz Bass Fretless";
 MY.matrizGuitarras[3][1] = "0194000761";
 MY.matrizGuitarras[3][2] = "2059.00";
 MY.matrizGuitarras[3][3] = "Negro";
-MY.matrizGuitarras[3][4] = "Two V-Mod II single-coil Jazz Bass pickups. Slim “C”-shaped neck profile with rolled fingerboard edges. ";
+MY.matrizGuitarras[3][4] = "Pastilla Precision Bass de bobina dividida V-Mod II single coil. Perfil de mástil de bajo del 63. Cejilla de hueso; 20 trastes estrechos y altos para una sensación familiar al tocar. Puente HiMass ™ Vintage para mayor sustain. Clavijero de eje acanalado; Varillas de grafito Posiflex para refuerzo del mástil. Incluye estuche rígido Elite Molded. ";
 MY.matrizGuitarras[3][5] = "img/american_prof_jazz_bass_fretless.jpg";
 
 //Guitarra 4
@@ -196,7 +196,7 @@ function listarGuitarrasCoincidentes(){
     divListaGuitarras.innerHTML = "";
 
     for (var i of vectorGuitarras) {
-        infoGuitarra = MY.matrizGuitarras[i];
+        var infoGuitarra = MY.matrizGuitarras[i];
 
         var divTargeta = document.createElement("div");
         divTargeta.setAttribute('class','tarjeta');
