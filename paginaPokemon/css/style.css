@@ -27,6 +27,11 @@ header {
     justify-content: center;
 }
 
+#tipoPokemonDiv{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 #tarjeta{
     display: flex;
     flex-direction: column;
