@@ -18,7 +18,9 @@ header {
     flex-wrap: wrap;
 }
 
+
 #tarjetas{
+
     border: 1px solid lightgray;
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius: 20px;

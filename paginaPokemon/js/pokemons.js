@@ -49,6 +49,7 @@ let selectPokemons = async() => {
 
 
 
+
 let pintarPokemons = async() =>{
 
     var nombreBuscado = document.getElementById("pokemon").value;
@@ -71,6 +72,7 @@ let pintarPokemons = async() =>{
         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
     })
 }
+
 
 
 document.querySelector('#pokemonTipo').onchange = pintarPokemons;
