@@ -1,5 +1,5 @@
 
-var pokemons;
+var pokemons = new Array();
 
 /*
 //Traer imagen de pokemon
@@ -41,13 +41,35 @@ var getPokemons = async(url) => {
     }
 }
 */
+
+var getPokemonInfo = async(url) => {
+    try{
+        var respuesta = await fetch(url);
+        var datos = await respuesta.json();
+        
+        pokemons.push(datos);
+        console.log(datos.types)
+        
+    } catch{
+        console.log(error);
+    }
+}
+
+
 var url = "https://pokeapi.co/api/v2/pokemon";
 var getPokemons = async(url) => {
     try{
         var respuesta = await fetch(url);
         var datos = await respuesta.json();
+        var lista = datos.results;
+        console.log(lista);
 
-        pokemons = datos;
+        for (var pokemon of lista) {
+            getPokemonInfo(pokemon.url)
+        }
+
+        console.log(pokemons)
+        
         
     } catch{
         console.log(error);
@@ -55,9 +77,19 @@ var getPokemons = async(url) => {
 }
 
 function filtarPokemon(){
-    var nombreBuscado = document.getElementById("nombrePokemon");
+    var nombreBuscado = document.getElementById("nombrePokemon").value;
+    var tipoBuscado = document.getElementById("tipoPokemon").value;
 
-    var tipoBuscado = document.getElementById("tipoPokemon");
 
+    var divPokemons = document.getElementById("mostrarPokemon");
 
+    var nuevoVector = pokemons.filter( item => item.name.includes(nombreBuscado)  );
+
+    nuevoVector = nuevoVector.filter( item => 
+        ( item.types.length == 2 && ( item.types[0].type.name == tipoBuscado || item.types[1].type.name == tipoBuscado) 
+        || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
+
+    
+
+    
 }
