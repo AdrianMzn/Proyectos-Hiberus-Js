@@ -29,12 +29,19 @@ let getPokemons = async(url) => {
 
 let selectPokemons = async() => {
     await getPokemons(url)
-    let tipoBuscado = document.getElementById("pokemonTipo").value;
+
+    var tipoBuscado = document.getElementById("pokemonTipo").value;
     document.querySelector('#pokemon').innerHTML = '<option value="default">Selecciona un Pokemon</option>';
+    var nombreBuscado = document.getElementById("pokemon").value;
     pokemons.forEach((poke) => {
         if (tipoBuscado == "default" || ( poke.types.length == 2 && ( poke.types[0].type.name == tipoBuscado || poke.types[1].type.name == tipoBuscado) 
         || poke.types.length == 1 && poke.types[0].type.name == tipoBuscado )) {
-           document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`; 
+            if (nombreBuscado == poke.name) {
+                document.querySelector('#pokemon').innerHTML += `<option selected value=${poke.name}>${poke.name}</option>`; 
+            }else{
+                document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`; 
+            }
+            
         }
         
     })
@@ -44,8 +51,8 @@ let selectPokemons = async() => {
 
 let pintarPokemons = async() =>{
 
-    let nombreBuscado = document.getElementById("pokemon").value;
-    let tipoBuscado = document.getElementById("pokemonTipo").value;
+    var nombreBuscado = document.getElementById("pokemon").value;
+    var tipoBuscado = document.getElementById("pokemonTipo").value;
     pokemons = [];
     await getPokemons(url)
     await selectPokemons()
