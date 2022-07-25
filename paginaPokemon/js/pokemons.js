@@ -1,7 +1,6 @@
 let pokemons = new Array();
-var pokemonsLeidos = false;
 
-//Traemos la primera generacion (151 pokemons) auqnue podriamos traer hasta 1000000
+//Traemos la primera generacion (151 pokemons) aunque podriamos traer hasta 1000000
 let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
 let getPokemonInfo = async(url) => {
