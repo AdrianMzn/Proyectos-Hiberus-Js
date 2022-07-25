@@ -13,9 +13,20 @@
         </header>
         <main>
             <section>
-                <select name="pokemon" id="pokemon">
-                    <option>Selecciona un Pokemon</option>
-                </select>
+                <div>
+                    <label for="pokemonTipo">Buscar pokemon tipo</label>
+                    <select name="pokemonTipo" id="pokemonTipo">
+                        <option value="default">Selecciona un Pokemon</option>
+                        <option value="fire">fire</option>
+                        <option value="grass">grass</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Buscar pokemon nombre</label>
+                    <select name="pokemon" id="pokemon">
+                        <option value="default">Selecciona un Pokemon</option>
+                    </select>
+                </div>
             </section>
             <section id="formularioTarjeta">
                 <div id="tarjetas"></div>
