@@ -1,5 +1,6 @@
 let pokemons = new Array();
-let url = "https://pokeapi.co/api/v2/pokemon";
+//Traemos la primera generacion (151 pokemons)
+let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
 let getPokemonInfo = async(url) => {
     try{
@@ -18,6 +19,7 @@ let getPokemons = async(url) => {
         let datos = await respuesta.json();
         let lista = datos.results;
 
+        console.log(datos);
         for (let pokemon of lista) {
             await getPokemonInfo(pokemon.url)
         }
@@ -59,21 +61,25 @@ let pintarPokemons = async() =>{
 
     let nombreBuscado = document.getElementById("pokemon").value;
     let tipoBuscado = document.getElementById("pokemonTipo").value;
-    pokemons = [];
-    await getPokemons(url)
-    await selectPokemons()
+    await getPokemons(url);
+    await selectPokemons();
     
-    let nuevoVector = pokemons.filter(item => item.name.includes(nombreBuscado) || nombreBuscado == "default");
-
-    console.log(nuevoVector)
-
-    nuevoVector = nuevoVector.filter( item => tipoBuscado == "default" ||
+    let vectorFilterTipo = pokemons.filter( item => tipoBuscado == "default" ||
         ( item.types.length == 2 && ( item.types[0].type.name == tipoBuscado || item.types[1].type.name == tipoBuscado) 
         || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
-    console.log(nuevoVector)
+
+    console.log(vectorFilterTipo)
+    
+    let vectorFilter = vectorFilterTipo.filter(item => item.name.includes(nombreBuscado) || nombreBuscado == "default");
+
+    // Si el vector de pokemons despues de filtrar por nombre es vacio pero tenemos seleccionado un tipo entonces devolvemos los pokemons de ese tipo
+    if(  vectorFilter.length == 0 && tipoBuscado != "default"){
+        vectorFilter = vectorFilterTipo;
+    }
+
+    console.log(vectorFilter)
     document.querySelector('#formularioTarjeta').innerHTML = '';
-        
-    nuevoVector.forEach((poke) => {
+    vectorFilter.forEach((poke) => {
         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
     })
 }
