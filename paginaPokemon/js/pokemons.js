@@ -26,11 +26,20 @@ let getPokemons = async(url) => {
     }
 }
 
-let pintarPokemons = async() => {
+let selectPokemons = async() => {
     await getPokemons(url)
     pokemons.forEach((poke) => {
-        console.log(poke);
+        document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`;
         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
     })
-    
 }
+
+//document.querySelector('#pokemon').onchange = pintarPokemons;
+
+// let pintarPokemons = async() =>{
+//     await getPokemons(url)
+//     pokemons.forEach((poke) => {
+//         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
+//     })
+// }
+
