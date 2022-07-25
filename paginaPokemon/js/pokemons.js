@@ -1,110 +1,79 @@
+let pokemons = new Array();
 
-var pokemons = new Array();
-
-/*
-//Traer imagen de pokemon
-var getPokemonImage = async(url) => {
+let getPokemonInfo = async(url) => {
     try{
-        var respuesta = await fetch(url);
-        var datos = await respuesta.json();
-        
-        var img = document.createElement('img');
-        img.src = datos.sprites.front_shiny;
-        img.setAttribute("style", "imagePokemon");
-        document.body.appendChild(img);
-        
-    } catch{
-        console.log(error);
-    }
-}
-
-
-//Traer la lista de los pokemon y mostrar sus nombres
-var url = "https://pokeapi.co/api/v2/pokemon";
-var getPokemons = async(url) => {
-    try{
-        var respuesta = await fetch(url);
-        var datos = await respuesta.json();
-        var lista = datos.results;
-
-        console.log(datos);
-        
-        for (var pokemon of lista) {
-            var frase = document.createElement('p');
-            frase.innerText = pokemon.name;
-            document.body.appendChild(frase);
-
-            await getPokemonImage(pokemon.url)
-        }
-    } catch{
-        console.log(error);
-    }
-}
-*/
-
-var getPokemonInfo = async(url) => {
-    try{
-        var respuesta = await fetch(url);
-        var datos = await respuesta.json();
-        
+        let respuesta = await fetch(url);
+        let datos = await respuesta.json();
         pokemons.push(datos);
-        
     } catch{
         console.log(error);
     }
 }
 
-
-var url = "https://pokeapi.co/api/v2/pokemon";
-var getPokemons = async(url) => {
+let url = "https://pokeapi.co/api/v2/pokemon";
+let getPokemons = async(url) => {
     try{
-        var respuesta = await fetch(url);
-        var datos = await respuesta.json();
-        var lista = datos.results;
-        console.log(lista);
+        pokemons = [];
+        let respuesta = await fetch(url);
+        let datos = await respuesta.json();
+        let lista = datos.results;
 
-        for (var pokemon of lista) {
-            await getPokemonInfo(pokemon.url);
+        for (let pokemon of lista) {
+            await getPokemonInfo(pokemon.url)
         }
-
-        filtarPokemon();
         
     } catch{
         console.log(error);
     }
 }
 
-function filtarPokemon(){
-    var nombreBuscado = document.getElementById("nombrePokemon").value;
-    var tipoBuscado = document.getElementById("tipoPokemon").value;
+let selectPokemons = async() => {
+    await getPokemons(url)
 
-    var divPokemons = document.getElementById("formularioTarjeta");
+    var tipoBuscado = document.getElementById("pokemonTipo").value;
+    document.querySelector('#pokemon').innerHTML = '<option value="default">Selecciona un Pokemon</option>';
+    var nombreBuscado = document.getElementById("pokemon").value;
+    pokemons.forEach((poke) => {
+        if (tipoBuscado == "default" || ( poke.types.length == 2 && ( poke.types[0].type.name == tipoBuscado || poke.types[1].type.name == tipoBuscado) 
+        || poke.types.length == 1 && poke.types[0].type.name == tipoBuscado )) {
+            if (nombreBuscado == poke.name) {
+                document.querySelector('#pokemon').innerHTML += `<option selected value=${poke.name}>${poke.name}</option>`; 
+            }else{
+                document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`; 
+            }
+            
+        }
+        
+    })
+}
 
-    console.log(pokemons)
 
-    var nuevoVector = pokemons.filter( item => item.name.includes(nombreBuscado)  );
 
-    console.log( nuevoVector)
 
-    console.log("Tipo: " + nuevoVector[0].types[0].type.name)
+let pintarPokemons = async() =>{
+
+    var nombreBuscado = document.getElementById("pokemon").value;
+    var tipoBuscado = document.getElementById("pokemonTipo").value;
+    pokemons = [];
+    await getPokemons(url)
+    await selectPokemons()
+    
+    let nuevoVector = pokemons.filter(item => item.name.includes(nombreBuscado) || nombreBuscado == "default");
+
+    console.log(nuevoVector)
 
     nuevoVector = nuevoVector.filter( item => tipoBuscado == "default" ||
         ( item.types.length == 2 && ( item.types[0].type.name == tipoBuscado || item.types[1].type.name == tipoBuscado) 
         || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
-
-    console.log( nuevoVector)
-    for (var pokemon of nuevoVector) {
+    console.log(nuevoVector)
+    document.querySelector('#formularioTarjeta').innerHTML = '';
         
-        var sectionPokemon = document.createElement("section");
-
-        sectionPokemon.setAttribute("class","tarjeta");
-        sectionPokemon.innerHTML = "<div id='title'>Datos pokemon</div>";
-        sectionPokemon.innerHTML += "<div id='nombre'>" + pokemon.name + "</div>";
-        sectionPokemon.innerHTML += "<div id='imagen'><img src='" + pokemon.sprites.front_shiny + "' alt='" + pokemon.name + "'></img></div>";
-
-        divPokemons.appendChild(sectionPokemon);
-    }
-    
-        
-    
+    nuevoVector.forEach((poke) => {
+        document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
+    })
 }
+
+
+
+document.querySelector('#pokemonTipo').onchange = pintarPokemons;
+document.querySelector('#pokemon').onchange = pintarPokemons;

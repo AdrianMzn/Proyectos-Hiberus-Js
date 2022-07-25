@@ -7,27 +7,30 @@
         <title>Document</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body onload="getPokemons('https://pokeapi.co/api/v2/pokemon')">
+    <body onload="selectPokemons()">
         <header>
             <h1>POKEMON</h1>
         </header>
         <main>
+            <section>
+                <div>
+                    <label for="pokemonTipo">Buscar pokemon tipo</label>
+                    <select name="pokemonTipo" id="pokemonTipo">
+                        <option value="default">Selecciona un Pokemon</option>
+                        <option value="fire">fire</option>
+                        <option value="grass">grass</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Buscar pokemon nombre</label>
+                    <select name="pokemon" id="pokemon">
+                        <option value="default">Selecciona un Pokemon</option>
+                    </select>
+                </div>
+            </section>
             <section id="formularioTarjeta">
-                <section id="formulario">
-                    <div>
-                        <h2 for="nombrePokemon">Nombre:</h2><br>
-                        <input type="text" onchange="filtarPokemon()" name="nombrePokemon" id="nombrePokemon" maxlength="40" />
-                    </div>
-                    <div>
-                       <h2>Seleccionar tipo</h2>
-                        <select id="tipoPokemon" onchange="filtarPokemon()">
-                            <option selected value="default">--Seleccionar tipo--</option>
-                            <option>grass</option>
-                            <option>fire</option>
-                        </select> 
-                    </div>
-                    <div></div>
-                </section>
+
+                <div id="tarjetas"></div>
             </section>   
         </main>
         <footer>

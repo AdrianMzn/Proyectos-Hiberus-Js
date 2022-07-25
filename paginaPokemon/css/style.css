@@ -14,37 +14,17 @@ header {
 }
 
 #formularioTarjeta{
-    margin: 100px 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-#formulario{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#tipoPokemonDiv{
     display: flex;
     flex-wrap: wrap;
 }
 
-#tarjeta{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+#tarjetas{
+
     border: 1px solid lightgray;
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius: 20px;
-    text-align: center; 
-    width: 500px;
-    height: 200px;
-    background: linear-gradient( rgb(227, 240, 207), rgb(140, 167, 140));
+    background-color: rgb(223, 81, 81);
 }
 
 
