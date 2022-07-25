@@ -1,3 +1,7 @@
+
+var pokemons;
+
+/*
 //Traer imagen de pokemon
 var getPokemonImage = async(url) => {
     try{
@@ -36,5 +40,26 @@ var getPokemons = async(url) => {
         console.log(error);
     }
 }
+*/
+var url = "https://pokeapi.co/api/v2/pokemon";
+var getPokemons = async(url) => {
+    try{
+        var respuesta = await fetch(url);
+        var datos = await respuesta.json();
+
+        console.log(datos);
+        
+    } catch{
+        console.log(error);
+    }
+}
 
 getPokemons(url);
+
+function filtarPokemon(){
+    var nombreBuscado = document.getElementById("nombrePokemon");
+
+    var tipoBuscado = document.getElementById("tipoPokemon");
+
+
+}
