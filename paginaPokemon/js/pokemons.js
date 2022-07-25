@@ -29,24 +29,42 @@ let getPokemons = async(url) => {
 
 let selectPokemons = async() => {
     await getPokemons(url)
+    let tipoBuscado = document.getElementById("pokemonTipo").value;
+    document.querySelector('#pokemon').innerHTML = '<option value="default">Selecciona un Pokemon</option>';
     pokemons.forEach((poke) => {
-        document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`;
-        // document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
+        if (tipoBuscado == "default" || ( poke.types.length == 2 && ( poke.types[0].type.name == tipoBuscado || poke.types[1].type.name == tipoBuscado) 
+        || poke.types.length == 1 && poke.types[0].type.name == tipoBuscado )) {
+           document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`; 
+        }
+        
     })
 }
 
 
 
 let pintarPokemons = async() =>{
-    debugger
-    await getPokemons(url)
 
-    var nombreBuscado = document.getElementById("pokemon").value;
-    // var tipoBuscado = document.getElementById("tipoPokemon").value;
-    var nuevoVector = pokemons.filter(item => item.name.includes(nombreBuscado));
+    let nombreBuscado = document.getElementById("pokemon").value;
+    let tipoBuscado = document.getElementById("pokemonTipo").value;
+    pokemons = [];
+    await getPokemons(url)
+    await selectPokemons()
+    
+    let nuevoVector = pokemons.filter(item => item.name.includes(nombreBuscado) || nombreBuscado == "default");
+
+    console.log(nuevoVector)
+
+    nuevoVector = nuevoVector.filter( item => tipoBuscado == "default" ||
+        ( item.types.length == 2 && ( item.types[0].type.name == tipoBuscado || item.types[1].type.name == tipoBuscado) 
+        || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
+    console.log(nuevoVector)
+    document.querySelector('#formularioTarjeta').innerHTML = '';
+        
     nuevoVector.forEach((poke) => {
         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
     })
 }
 
+
+document.querySelector('#pokemonTipo').onchange = pintarPokemons;
 document.querySelector('#pokemon').onchange = pintarPokemons;
