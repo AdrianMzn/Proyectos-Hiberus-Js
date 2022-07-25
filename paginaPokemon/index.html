@@ -7,23 +7,13 @@
         <title>Document</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    <body onload="getPokemons('https://pokeapi.co/api/v2/pokemon')">
+    <body onload="pintarPokemons()">
         <header>
             <h1>POKEMON</h1>
         </header>
         <main>
             <section id="formularioTarjeta">
-                <section id="formulario">
-                    <h2>formulario</h2>
-                    <select id="select">
-                        <option>Selecciona un pokemon</option>
-                    </select>  
-                </section>
-                <section id="tarjeta">
-                        <div id="title">Datos pokemon</div>
-                        <div id="nombre">prueba</div>
-                        <div id="imagen">prueba</div>
-                </section>
+                <div id="tarjetas"></div>
             </section>   
         </main>
         <footer>
