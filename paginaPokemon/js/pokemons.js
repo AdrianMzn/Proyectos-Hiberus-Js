@@ -48,7 +48,6 @@ var getPokemonInfo = async(url) => {
         var datos = await respuesta.json();
         
         pokemons.push(datos);
-        console.log(datos.types)
         
     } catch{
         console.log(error);
@@ -65,11 +64,10 @@ var getPokemons = async(url) => {
         console.log(lista);
 
         for (var pokemon of lista) {
-            getPokemonInfo(pokemon.url)
+            await getPokemonInfo(pokemon.url);
         }
 
-        console.log(pokemons)
-        
+        filtarPokemon();
         
     } catch{
         console.log(error);
@@ -80,25 +78,31 @@ function filtarPokemon(){
     var nombreBuscado = document.getElementById("nombrePokemon").value;
     var tipoBuscado = document.getElementById("tipoPokemon").value;
 
-    
     var divPokemons = document.getElementById("formularioTarjeta");
+
+    console.log(pokemons)
 
     var nuevoVector = pokemons.filter( item => item.name.includes(nombreBuscado)  );
 
-    nuevoVector = nuevoVector.filter( item => 
+    console.log( nuevoVector)
+
+    console.log("Tipo: " + nuevoVector[0].types[0].type.name)
+
+    nuevoVector = nuevoVector.filter( item => tipoBuscado == "default" ||
         ( item.types.length == 2 && ( item.types[0].type.name == tipoBuscado || item.types[1].type.name == tipoBuscado) 
         || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
 
-    
+    console.log( nuevoVector)
     for (var pokemon of nuevoVector) {
+        
         var sectionPokemon = document.createElement("section");
 
         sectionPokemon.setAttribute("class","tarjeta");
-        tarjetaPokemon.innerHTML = "<div id='title'>Datos pokemon</div>";
-        tarjetaPokemon.innerHTML += "<div id='nombre'>" + pokemon.name + "</div>";
-        tarjetaPokemon.innerHTML += "<div id='imagen'><img src='" + pokemon.sprites.front_shiny + "' alt='" + pokemon.name + "'></img></div>";
+        sectionPokemon.innerHTML = "<div id='title'>Datos pokemon</div>";
+        sectionPokemon.innerHTML += "<div id='nombre'>" + pokemon.name + "</div>";
+        sectionPokemon.innerHTML += "<div id='imagen'><img src='" + pokemon.sprites.front_shiny + "' alt='" + pokemon.name + "'></img></div>";
 
-        divPokemons.appendChild(tarjetaPokemon);
+        divPokemons.appendChild(sectionPokemon);
     }
     
         
