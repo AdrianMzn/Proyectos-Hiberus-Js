@@ -47,14 +47,12 @@ var getPokemons = async(url) => {
         var respuesta = await fetch(url);
         var datos = await respuesta.json();
 
-        console.log(datos);
+        pokemons = datos;
         
     } catch{
         console.log(error);
     }
 }
-
-getPokemons(url);
 
 function filtarPokemon(){
     var nombreBuscado = document.getElementById("nombrePokemon");
