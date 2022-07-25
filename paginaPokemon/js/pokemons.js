@@ -5,7 +5,8 @@ var getPokemonImage = async(url) => {
         var datos = await respuesta.json();
         
         var img = document.createElement('img');
-        img.src = datos.sprites.front_default;
+        img.src = datos.sprites.front_shiny;
+        img.setAttribute("style", "imagePokemon");
         document.body.appendChild(img);
         
     } catch{
@@ -21,6 +22,8 @@ var getPokemons = async(url) => {
         var respuesta = await fetch(url);
         var datos = await respuesta.json();
         var lista = datos.results;
+
+        console.log(datos);
         
         for (var pokemon of lista) {
             var frase = document.createElement('p');
