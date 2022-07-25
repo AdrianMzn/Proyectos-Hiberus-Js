@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+* {
+    margin: 0;
+    font-family: 'lato';
+}
+
+header {
+    background-color: rgb(94, 136, 94);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+main{
+    width: 400px;
+}
+
+footer {
+    background-color: rgb(168, 197, 148);
+    color: white;
+    text-align: center;
+    padding: 57px;
+}
