@@ -1,4 +1,6 @@
 let pokemons = new Array();
+var pokemonsLeidos = false;
+
 //Traemos la primera generacion (151 pokemons)
 let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
 
@@ -30,7 +32,12 @@ let getPokemons = async(url) => {
 }
 
 let selectPokemons = async() => {
-    await getPokemons(url)
+
+    if ( !pokemonsLeidos ){
+        await getPokemons(url)
+        pokemonsLeidos = true;
+    }
+    
     
     
     document.querySelector('#formularioTarjeta').innerHTML += `<img id="opacity" src="../img/pokemons.jpg" alt="pokemon">`
@@ -61,7 +68,6 @@ let pintarPokemons = async() =>{
 
     let nombreBuscado = document.getElementById("pokemon").value;
     let tipoBuscado = document.getElementById("pokemonTipo").value;
-    await getPokemons(url);
     await selectPokemons();
     
     let vectorFilterTipo = pokemons.filter( item => tipoBuscado == "default" ||
