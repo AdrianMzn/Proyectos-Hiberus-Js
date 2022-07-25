@@ -1,0 +1,193 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+* {
+    margin: 0;
+    font-family: 'lato';
+}
+
+/* **************** CABECERA ***************** */
+/*Estilos para Header*/
+#headerIndex {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+/*Estilos para Nav*/
+#navIndex {
+    background-color: rgb(177, 79, 79);
+    padding: 7px 0
+}
+
+.imgNav{
+    width: 35px;
+    height: 35px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.linkNav:hover{
+    background-color: gray;
+    padding: 7px 30px;
+    border-radius: 50px;
+}
+
+ /*Current: señala en la página que estamos*/
+.current{
+    background-color: rgba(255, 255, 255, 0.445);
+    color: brown;
+    border-radius: 50px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.linkNav {
+    color: rgb(248, 249, 250);
+    padding: 7px 30px;
+}
+
+
+/* ***************** MAIN ***************** */
+/*Estilos para main*/
+#mainSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Historia bajo*/
+#historiaBajo{
+    background-color: rgba(190, 188, 188, 0.267);
+    padding: 30px;
+}
+
+#h2Historia {
+    font-size: 30px;
+    text-align: center;
+}
+
+.pHistoria {
+    text-align: justify;
+    margin: 5px;
+    padding: 0 100px;
+}
+
+/*Links imagenes añadir y buscar*/
+#linkPaginasAnadirBuscar {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.linkImgPaginas {
+    text-align: center;
+    width: 35%;
+    margin: 100px 50px 150px;
+}
+
+/*Para hacer el hover en las imagenes link de la home*/
+.imgLinkIndex {
+    border-radius: 5px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    z-index: 0;
+}
+  
+.textoImg {
+    color: rgb(143, 63, 63);
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.linkImgPaginas:hover .imgLinkIndex {
+opacity: 0.3;
+}
+
+.linkImgPaginas:hover .textoImg {
+opacity: 1;
+}
+
+/*Video Youtube*/
+.videoYouTube{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(190, 188, 188, 0.267);
+}
+
+iframe{
+    border-radius: 5px;
+}
+
+/* ***************** FOOTER ***************** */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 57px;
+}
+
+@media (max-width: 600px) {
+    #headerIndex {
+        font-size: 18px;
+    }
+
+    .imgNav{
+        width: 25px;
+        height: 25px;
+    }
+    
+    ul {
+        font-size: 13px;
+    }
+
+    .linkNav, .linkNav:hover{
+        padding: 7px 15px;
+    }
+
+    #h2Historia {
+        font-size: 22px;
+    }
+    
+    .pHistoria {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    #linkPaginasAnadirBuscar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .linkImgPaginas{
+        width: 65%;
+        margin: 40px 50px 60px;
+    }
+    
+    .linkImgPaginas h3{
+        font-size: 16px;
+
+    }
+}
