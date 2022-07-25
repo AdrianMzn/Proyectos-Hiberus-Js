@@ -80,8 +80,8 @@ function filtarPokemon(){
     var nombreBuscado = document.getElementById("nombrePokemon").value;
     var tipoBuscado = document.getElementById("tipoPokemon").value;
 
-
-    var divPokemons = document.getElementById("mostrarPokemon");
+    
+    var divPokemons = document.getElementById("formularioTarjeta");
 
     var nuevoVector = pokemons.filter( item => item.name.includes(nombreBuscado)  );
 
@@ -90,6 +90,17 @@ function filtarPokemon(){
         || item.types.length == 1 && item.types[0].type.name == tipoBuscado ));
 
     
+    for (var pokemon of nuevoVector) {
+        var sectionPokemon = document.createElement("section");
 
+        sectionPokemon.setAttribute("class","tarjeta");
+        tarjetaPokemon.innerHTML = "<div id='title'>Datos pokemon</div>";
+        tarjetaPokemon.innerHTML += "<div id='nombre'>" + pokemon.name + "</div>";
+        tarjetaPokemon.innerHTML += "<div id='imagen'><img src='" + pokemon.sprites.front_shiny + "' alt='" + pokemon.name + "'></img></div>";
+
+        divPokemons.appendChild(tarjetaPokemon);
+    }
+    
+        
     
 }
