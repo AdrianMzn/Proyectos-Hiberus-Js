@@ -5,32 +5,46 @@
     font-family: 'lato';
 }
 
-header {
-    background-color: rgb(94, 136, 94);
+#tituloHeader {
+    background: url('../img/cab_pokedex.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     font-size: 25px;
-    padding: 10px 0;
+    padding: 5%;
+}
+
+#opacity{
+    opacity: 0.5;
+}
+
+#tipoNombrePokemon{
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 20px;
 }
 
 #formularioTarjeta{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    background-color: #d8c9c6;
+    padding: 250px;
 }
 
-
 #tarjetas{
-
     border: 1px solid lightgray;
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius: 20px;
-    background-color: rgb(223, 81, 81);
+    background-color: #F46A4D;
+    text-align: center;
 }
 
-
 footer {
-    background-color: rgb(168, 197, 148);
+    background-color: #F46A4D;
     color: white;
     text-align: center;
-    padding: 57px;
+    padding: 30px;
 }

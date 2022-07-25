@@ -1,4 +1,5 @@
 let pokemons = new Array();
+let url = "https://pokeapi.co/api/v2/pokemon";
 
 let getPokemonInfo = async(url) => {
     try{
@@ -10,7 +11,6 @@ let getPokemonInfo = async(url) => {
     }
 }
 
-let url = "https://pokeapi.co/api/v2/pokemon";
 let getPokemons = async(url) => {
     try{
         pokemons = [];
@@ -29,15 +29,23 @@ let getPokemons = async(url) => {
 
 let selectPokemons = async() => {
     await getPokemons(url)
+    
+    
+    document.querySelector('#formularioTarjeta').innerHTML += `<img id="opacity" src="../img/pokemons.jpg" alt="pokemon">`
+    
 
-    var tipoBuscado = document.getElementById("pokemonTipo").value;
+    let tipoBuscado = document.getElementById("pokemonTipo").value;
+    let nombreBuscado = document.getElementById("pokemon").value;
+
     document.querySelector('#pokemon').innerHTML = '<option value="default">Selecciona un Pokemon</option>';
-    var nombreBuscado = document.getElementById("pokemon").value;
+    
     pokemons.forEach((poke) => {
+
         if (tipoBuscado == "default" || ( poke.types.length == 2 && ( poke.types[0].type.name == tipoBuscado || poke.types[1].type.name == tipoBuscado) 
         || poke.types.length == 1 && poke.types[0].type.name == tipoBuscado )) {
             if (nombreBuscado == poke.name) {
                 document.querySelector('#pokemon').innerHTML += `<option selected value=${poke.name}>${poke.name}</option>`; 
+
             }else{
                 document.querySelector('#pokemon').innerHTML += `<option value=${poke.name}>${poke.name}</option>`; 
             }
@@ -47,13 +55,10 @@ let selectPokemons = async() => {
     })
 }
 
-
-
-
 let pintarPokemons = async() =>{
 
-    var nombreBuscado = document.getElementById("pokemon").value;
-    var tipoBuscado = document.getElementById("pokemonTipo").value;
+    let nombreBuscado = document.getElementById("pokemon").value;
+    let tipoBuscado = document.getElementById("pokemonTipo").value;
     pokemons = [];
     await getPokemons(url)
     await selectPokemons()
@@ -72,8 +77,6 @@ let pintarPokemons = async() =>{
         document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
     })
 }
-
-
 
 document.querySelector('#pokemonTipo').onchange = pintarPokemons;
 document.querySelector('#pokemon').onchange = pintarPokemons;

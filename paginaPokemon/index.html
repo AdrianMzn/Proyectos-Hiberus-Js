@@ -9,11 +9,12 @@
     </head>
     <body onload="selectPokemons()">
         <header>
-            <h1>POKEMON</h1>
+            <div id="tituloHeader"></div>
         </header>
         <main>
-            <section>
+            <section id="tipoNombrePokemon">
                 <div>
+                    <h2>Selecciona el tipo del pokemon</h2>
                     <label for="pokemonTipo">Buscar pokemon tipo</label>
                     <select name="pokemonTipo" id="pokemonTipo">
                         <option value="default">Selecciona un Pokemon</option>
@@ -22,6 +23,7 @@
                     </select>
                 </div>
                 <div>
+                    <h2>Selecciona el nombre del pokemon</h2>
                     <label for="">Buscar pokemon nombre</label>
                     <select name="pokemon" id="pokemon">
                         <option value="default">Selecciona un Pokemon</option>
@@ -29,7 +31,6 @@
                 </div>
             </section>
             <section id="formularioTarjeta">
-
                 <div id="tarjetas"></div>
             </section>   
         </main>
