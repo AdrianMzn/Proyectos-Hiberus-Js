@@ -26,6 +26,8 @@ let getPokemons = async() => {
         }
 
         await selectPokemons();
+
+        pintarPokemons();
         
     } catch{
         console.log(error);
