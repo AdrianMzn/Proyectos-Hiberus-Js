@@ -1,4 +1,4 @@
-let pokemons = new Array();
+let pokemons;
 
 //Traemos la primera generacion (151 pokemons) aunque podriamos traer hasta 1000000
 let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
@@ -13,10 +13,10 @@ let getPokemonInfo = async(url) => {
     }
 }
 
-// Funcion que hace peticion al servidor para pillar la informacion de los pokemons, solo se llama una vez al cargar la web
+// Funcion que hace peticion al servidor para pillar la informacion de los pokemons, solo se llama una vez al cargar la web y al cambiar el numero de pokemons
 let getPokemons = async() => {
     try{
-        pokemons = [];
+        pokemons = new Array();
         let respuesta = await fetch(url);
         let datos = await respuesta.json();
         let lista = datos.results;
