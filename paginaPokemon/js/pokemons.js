@@ -1,4 +1,4 @@
-let pokemons;
+var pokemons;
 
 //Traemos la primera generacion (151 pokemons) aunque podriamos traer hasta 1000000
 let url = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
@@ -22,7 +22,7 @@ let getPokemons = async() => {
         let lista = datos.results;
 
         for (let pokemon of lista) {
-            await getPokemonInfo(pokemon.url)
+            await getPokemonInfo(pokemon.url);
         }
 
         await selectPokemons();
@@ -36,7 +36,7 @@ let getPokemons = async() => {
 //  seleccione un tipo de pokemon para solo mostrar los pokemons de ese tipo en el select
 let selectPokemons = async() => {
 
-    document.querySelector('#formularioTarjeta').innerHTML += `<img id="opacity" src="../img/pokemons.jpg" alt="pokemon">`
+    document.querySelector('#formularioTarjeta').innerHTML += `<img id="opacity" src="../img/pokemons.jpg" alt="pokemon">`;
 
     let tipoBuscado = document.getElementById("pokemonTipo").value;
     let nombreBuscado = document.getElementById("pokemon").value;
@@ -84,16 +84,17 @@ let pintarPokemons = async() =>{
     // Pintamos una a una las tarjetas de los pokemons que cumplen los filtros
     document.querySelector('#formularioTarjeta').innerHTML = '';
     vectorFilter.forEach((poke) => {
-        document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`
+        document.querySelector('#formularioTarjeta').innerHTML += `<div id="tarjetas"><p>${poke.name}</p><img src="${poke.sprites.front_shiny}" alt=""></div>`;
     })
 }
 
 let cambiarNumPokemon = async() =>{
+    pokemons = new Array();
     let numPokemonBuscar = document.getElementById("numPokemon").value;
     url = "https://pokeapi.co/api/v2/pokemon?limit=" + numPokemonBuscar + "&offset=0";
     await getPokemons();
 
-    pintarPokemons();
+    await pintarPokemons();
 }
 
 document.querySelector('#pokemonTipo').onchange = pintarPokemons;
