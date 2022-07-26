@@ -90,5 +90,12 @@ let pintarPokemons = async() =>{
     })
 }
 
+let cambiarNumPokemon = async() =>{
+    let numPokemonBuscar = document.getElementById("numPokemon").value;
+    url = "https://pokeapi.co/api/v2/pokemon?limit=" + numPokemonBuscar + "&offset=0";
+    await getPokemons();
+}
+
 document.querySelector('#pokemonTipo').onchange = pintarPokemons;
 document.querySelector('#pokemon').onchange = pintarPokemons;
+document.querySelector('#numPokemon').onchange = cambiarNumPokemon;
